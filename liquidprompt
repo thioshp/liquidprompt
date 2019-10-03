@@ -593,7 +593,7 @@ _lp_connection()
     else
         # tmux: see GH #304
         # TODO check on *BSD
-        local whoami="$(LC_ALL=C who am i)"
+        local whoami="$(LC_ALL=C whoami)"
         local sess_parent="$(ps -o comm= -p $PPID 2> /dev/null)"
         if [[ x"$whoami" != *'('* || x"$whoami" = *'(:'* || x"$whoami" = *'(tmux'* ]]; then
             echo lcl  # Local
